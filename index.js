@@ -46,7 +46,10 @@
         empData.age = new Date().getFullYear() - parseInt(empData.dob.slice(0,4),10);
         empData.imageUrl = empData.imageUrl || "https://cdn-icons-png.flaticon.com/512/0/93.png";
         employees.push(empData);
+        selectedEmployeeId = empData.id;
+        selectedEmployee = empData;
         renderEmployees();
+        renderSingleEmployee();
         addEmployeeForm.reset();
         addEmployeeModal.style.display = "none";
     })
